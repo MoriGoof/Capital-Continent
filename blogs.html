@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITAL CONTINENT - Blogs</title>
+
+    <link rel="stylesheet" href="css/rules.css">
+
+    <link rel="icon" type="image/x-icon" href="/images/round-flag.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="index.html" class="logo">CAPITAL CONTINENT</a>
+            <div class="header-right">
+                <a href="index.html">Home</a>
+                <a href="laws.html">Laws</a>
+                <a class="active" href="blogs.html">Blogs</a>
+                <a href="news.html">News</a>
+                <a href="events.html">Events</a>
+                <a href="districs.html">Districts</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="main-content">
+                <div class="rule-container">
+                    <ul>
+                        <li><a href="blogs/bent.html">Bent's Blog Posts</a></li>
+                        <li><a href="blogs/konstantin.html">Konstantin's Blog Posts</a></li>
+                        <li><a href="blogs/moritz.html">Moritz's Blog Posts</a></li>
+                        <li><a href="blogs/felix.html">Felix's Blog Posts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', function() {
+          // Get the list and sort its items alphabetically
+          var list = document.querySelector('.rule-container ul');
+          var items = Array.from(list.children);
+          items.sort(function(a, b) {
+            return a.textContent.localeCompare(b.textContent);
+          });
+          
+          // Re-add the sorted items to the list
+          items.forEach(function(item) {
+            list.appendChild(item);
+          });
+        });
+      </script>
+
+</body>
+</html>
